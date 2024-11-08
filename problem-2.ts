@@ -1,6 +1,13 @@
 // Problem 2
 
 function removeDuplicates(array: number[]): number[] {
-  const set = new Set(array);
-  return Array.from(set);
+  const result: number[] = [];
+
+  for (const x of array) {
+    if (result.indexOf(x) === -1) {
+      result.push(x);
+    }
+  }
+
+  return result;
 }
